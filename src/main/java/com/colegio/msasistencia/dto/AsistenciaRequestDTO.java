@@ -22,6 +22,6 @@ public class AsistenciaRequestDTO {
     @NotNull(message = "La fecha es obligatoria")
     private LocalDate fecha;
 
-    @NotBlank(message = "El estado de la asistencia no puede estar vacío")
+    @NotBlank(message = "El estado es obligatorio")
     private String estado;
 }

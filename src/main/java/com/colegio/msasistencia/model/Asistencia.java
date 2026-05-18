@@ -4,13 +4,14 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "asistencias")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name = "asistencias")
 public class Asistencia {
 
     @Id
@@ -26,6 +27,6 @@ public class Asistencia {
     @Column(nullable = false)
     private LocalDate fecha;
 
-    @Column(nullable = false)
-    private String estado; 
+    @Column(nullable = false, length = 20)
+    private String estado;
 }
